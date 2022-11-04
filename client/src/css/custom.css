@@ -1,0 +1,16 @@
+button {
+  border: none;
+  color: rgb(231, 231, 231);
+}
+
+.navbar {
+  background-color: rgb(10, 110, 131);
+}
+
+.editBtn {
+  background-color: rgb(10, 110, 131);
+}
+
+.deleteBtn {
+  background-color: rgb(205, 127, 67)
+}
