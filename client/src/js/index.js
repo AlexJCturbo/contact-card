@@ -29,7 +29,6 @@ window.addEventListener('load', function () {
   document.getElementById('dogThumbnail').src = Dog;
 });
 
-
 //Form functionality
 const form = document.getElementById("formToggle");
 const newContactButton = document.getElementById("new-contact");
