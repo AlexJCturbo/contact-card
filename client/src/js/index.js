@@ -1,7 +1,7 @@
 //Import js modules
 import './form';
 //import './submit'
-import { initDb, getDb, postDb, deleteDb } from './database.js'
+import { initDb, getDb, postDb, deleteDb, editDb } from './database.js'
 import { fetchCards } from './card.js';
 import { toggleForm, clearForm } from './form.js'
 
@@ -20,7 +20,7 @@ import Dog from '../images/dog.png';
 window.addEventListener('load', function () {
   // //We are temporarily placing getDb() and postDb() function calls here for testing. We will move them to another event listener later.
   initDb();
-  postDb('Toby', 'toby_da_pup@fluff.com', 5212345678, 'Dog');
+  //postDb('Toby', 'toby_da_pup@fluff.com', 5212345678, 'Dog');
   // getDb();
   fetchCards();
 
@@ -52,6 +52,13 @@ form.addEventListener('submit', event => {
   if (submitBtnToUpdate == false) {
     postDb(name, email, phone, profile);
   } else {
+    //Obtain values passed into the form element
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let profile = document.querySelector('input[type="radio"]:checked').value;
+    //Call the editDB function passing in any values from the form element as well as the ID of the contact that we are updating
+    editDb(profileId, name, email, phone, profile);
 
     fetchCards();
     //Toggles the submit button back to POST functionality
@@ -67,10 +74,28 @@ form.addEventListener('submit', event => {
 });
 
 window.deleteCard = (e) => {
-  //Grab id from the button element attached to the contact card
+  //Grab id from the button element attached to the contact card using parseInt() method
   let id = parseInt(e.id);
   //Delete the card
   deleteDb(id);
   //Reload the DOM
   fetchCards();
+};
+
+window.editCard = (e) => {
+  //Grab id from the button element attached to the contact card and sets a global variable that will be used in the form element
+  profileId = parseInt(e.dataset.id);
+
+  //Grab information to pre-populate edit form
+  let editName = e.dataset.name;
+  let editEmail = e.dataset.email;
+  let editPhone = e.dataset.phone;
+
+  document.getElementById("name").value = editName;
+  document.getElementById("email").value = editEmail;
+  document.getElementById("phone").value = editPhone;
+
+  form.style.display = "block";
+  //Toggle the submit button so that it now Updates an existing contact instead of posting a new one
+  submitBtnToUpdate = true;
 };
