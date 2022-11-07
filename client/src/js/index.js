@@ -16,6 +16,48 @@ import Logo from '../images/contact-info_64px.png';
 import Bear from '../images/bear.png';
 import Dog from '../images/dog.png';
 
+//Install button
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  installBtn.style.visibility = 'visible';
+
+  installBtn.addEventListener('click', () => {
+    event.prompt();
+    installBtn.setAttribute('disabled', true);
+    installBtn.textContent = 'Installed!';
+  });
+});
+
+window.addEventListener('appInstalled', (event) => {
+  console.log('Installed!', 'appInstalled', event);
+});
+
+
+//Share the PWA
+const shareData = {
+  title: 'Contact Cards Application',
+  text: 'Install the Contact Cards Application',
+  url: 'https://vast-depths-68083.herokuapp.com/'
+}
+
+const btn = document.getElementById('shareBtn');
+const resultPara = document.querySelector('.result');
+
+//Share must be triggered by "user activation"
+btn.addEventListener('click', async () => {
+  try {
+    await navigator.share(shareData);
+    resultPara.textContent = '👍';
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`;
+  }
+});
+
+
+
+
 //Add images on load
 window.addEventListener('load', function () {
   // //We are temporarily placing getDb() and postDb() function calls here for testing. We will move them to another event listener later.
