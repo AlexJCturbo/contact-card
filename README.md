@@ -6,7 +6,6 @@
 - [User Story](#User-Story)
 - [Screen Captures](#Screen-Captures)
 - [Technologies](#Technologies)
-- [Questions](#Questions)
 - [Links](#Links)
 
 
@@ -50,12 +49,6 @@ As a developer I want to:
 ###### [Back to Index](#Table-of-Contents)
 
 
-## Questions
-Please, feel free to get in touch to discuss any inquiries or suggestions about the project. I will be happy to connect with you!
-###### [Back to Index](#Table-of-Contents)
-
-
 ## Links
-- [Application Repository](https://github.com/AlexJCturbo/contact-card)
-- [Deployed Application](https://sheltered-brushlands-43269.herokuapp.com/)
+- [Deployed Application](https://boiling-wave-28977.herokuapp.com/)
 ###### [Back to Index](#Table-of-Contents)
