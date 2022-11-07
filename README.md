@@ -28,7 +28,6 @@ As a developer I want to:
 - Add service worker using Workbox.
 - Configure the Contact Cards application to be installable by the end user.
 ```
-
 ###### [Back to Index](#Table-of-Contents)
 
 
