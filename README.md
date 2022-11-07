@@ -10,6 +10,7 @@
 
 
 ## Project Description
+
 A Progressive Web Application (PWA) of a Contact Cards application. This app allows users to store contact information and profile pics and add, edit, and delete the information as needed in a convenient single-page application that can be used on any device.
 
 The application implements the client-server model built with HTML, CSS, and JavaScript. Then, using webpack to bundle JavaScript modules, the app's speed and performance are improved. After that, using IndexededDB web API, the app's data becomes persistent in the browser. Service worker functionality is then generated and registered to enable offline functionality. Finally, a ``` manifest.json ``` is added to the app to give the user a fast, network-independent experience that works on any device.
@@ -18,6 +19,7 @@ The application implements the client-server model built with HTML, CSS, and Jav
 
 
 ## User Story
+
 ```
 As a developer I want to:
 - See the client-server folder structure.
@@ -31,7 +33,12 @@ As a developer I want to:
 
 
 ## Screen Captures
-![Contact Cards 01 main](./src/)
+
+![Contact Cards 01 main](./client/src/images/contact_card_01_main.png)
+
+![Contact Cards 02 contacts](./client/src/images/contact_card_02_contacts.png)
+
+![Contact Cards 03 application](./client/src/images/contact_card_03_app.png)
 
 ###### [Back to Index](#Table-of-Contents)
 
@@ -50,5 +57,7 @@ As a developer I want to:
 
 
 ## Links
+
 - [Deployed Application](https://boiling-wave-28977.herokuapp.com/)
+
 ###### [Back to Index](#Table-of-Contents)
