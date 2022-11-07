@@ -1,0 +1,32 @@
+{
+  "name": "contact-card",
+  "version": "1.0.0",
+  "description": "A Progressive Web Application (PWA) of a Contact Cards app. The Contact Cards app allows users to store contact information and profile pics and add, edit, and delete information as needed in a convenient single-page application that can be used on any device.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" ",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexJCturbo/contact-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexJCturbo/contact-card/issues"
+  },
+  "homepage": "https://github.com/AlexJCturbo/contact-card#readme",
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  },
+  "engines": {
+    "node": "v16.17.0"
+  }
+}
