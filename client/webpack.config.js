@@ -4,9 +4,10 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 //const { GenerateSW } = require('workbox-webpack-plugin');
+//const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
@@ -42,7 +43,10 @@ module.exports = {
     new InjectManifest({
       swSrc: './src/sw.js',
       swDest: 'service-worker.js',
-    })
+    }),
+    // new CompressionPlugin({
+    //   algorithm: "gzip"
+    // }),
     //Instead of GenerateSW we will use InjectManifest
     // new WorkboxPlugin.GenerateSW({
     //   //Do not precache images
