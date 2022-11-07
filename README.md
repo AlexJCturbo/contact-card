@@ -12,3 +12,8 @@ A Progressive Web Application (PWA) of a Contact Cards app. The Contact Cards ap
 - [Questions](#Questions)
 - [Links](#Links)
 - [License](#License)
+
+
+## Project Description
+
+###### [Back to Index](#Table-of-Contents)
